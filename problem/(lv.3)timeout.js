@@ -12,9 +12,10 @@
  */
 
 async function timeOut(promise, ms) {
-  const result = await promise();
-  setTimeout(result, ms);
-  reject("time out");
+  const timeout = new Promise((resolve, reject) => {
+    setTimeout(() => reject("timeout"), ms);
+  });
+  return Promise.race([promise, timeout]);
 }
 
 // export를 수정하지 마세요.

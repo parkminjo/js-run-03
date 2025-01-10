@@ -8,10 +8,9 @@
 
 // TODO: returnHello 함수를 작성하세요.
 function returnHello() {
-  let sayHello = new Promise((resolve, reject) => {
+  return new Promise((resolve, reject) => {
     resolve("Hello");
   });
-  return sayHello;
 }
 
 // export를 수정하지 마세요.

@@ -10,10 +10,9 @@
 
 // TODO: delay 함수를 작성하세요.
 async function delay(ms) {
-  let delay1 = new Promise((resolve, reject) => {
+  return new Promise((resolve, reject) => {
     setTimeout(resolve("done"), ms);
   });
-  return delay1;
 }
 
 // export를 수정하지 마세요.
